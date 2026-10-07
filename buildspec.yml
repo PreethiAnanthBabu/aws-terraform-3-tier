@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+
+  install:
+    commands:
+      - echo "Install phase"
+
+  pre_build:
+    commands:
+      - echo "Pre-build phase"
+
+  build:
+    commands:
+      - echo "Building application"
+      - echo "No compilation required for static HTML"
+
+  post_build:
+    commands:
+      - echo "Build completed"
+
+artifacts:
+  files:
+    - index.html
+    - appspec.yml
+    - scripts/**/*
