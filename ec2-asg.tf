@@ -34,6 +34,19 @@ cat > /usr/share/nginx/html/index.html <<HTML
 HTML
 
 systemctl restart nginx
+
+# Install CodeDeploy agent
+cd /tmp
+
+wget -O install \
+https://aws-codedeploy-eu-west-1.s3.eu-west-1.amazonaws.com/latest/install
+
+chmod +x install
+./install auto
+
+systemctl enable codedeploy-agent
+systemctl start codedeploy-agent
+
 EOT
   )
 
