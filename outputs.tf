@@ -25,3 +25,13 @@ output "rds_port" {
 output "ec2_role_name" {
   value = aws_iam_role.ec2_role.name
 }
+
+output "route53_name_servers" {
+  description = "Route 53 name servers to configure in GoDaddy"
+  value       = aws_route53_zone.main.name_servers
+}
+
+output "website_url" {
+  description = "Website domain"
+  value       = "http://${var.domain_name}"
+}

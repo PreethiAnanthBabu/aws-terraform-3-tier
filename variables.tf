@@ -76,3 +76,8 @@ variable "db_password" {
   type      = string
   sensitive = true
 }
+
+variable "domain_name" {
+  description = "Domain name registered with GoDaddy"
+  type        = string
+}
