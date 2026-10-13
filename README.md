@@ -225,3 +225,65 @@ CodeDeploy reads:
 appspec.yml
 ```
 and deploys the application files to EC2 instances.
+
+## Terraform Deployment
+
+Typical Terraform workflow:
+
+```
+terraform fmt
+terraform init
+terraform validate
+terraform plan
+terraform apply
+```
+
+To remove the environment:
+
+```
+terraform destroy
+```
+
+## Troubleshooting Performed
+
+During development I investigated:
+- ALB unhealthy targets
+- Security group connectivity
+- Auto Scaling target registration
+- IAM permissions
+- CodePipeline artifact access
+- CodeDeploy agent issues
+- CodeDeploy deployment group configuration
+- Nginx service availability
+- Route 53 DNS configuration
+
+## Skills Demonstrated
+
+- AWS
+- Terraform
+- Infrastructure as Code
+- VPC Networking
+- EC2
+- Auto Scaling
+- Application Load Balancer
+- RDS
+- IAM
+- Route 53
+- HTTPS
+- AWS Certificate Manager
+- CodePipeline
+- CodeBuild
+- CodeDeploy
+- Git
+- GitHub
+- Linux
+- Nginx
+
+## Security Notes
+
+Sensitive information is excluded from this repository.
+The following are not committed:
+- AWS credentials
+- Database passwords
+- Terraform state files
+- terraform.tfvars
