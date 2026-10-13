@@ -33,6 +33,7 @@ Private Subnet A       Private Subnet B
 
 ## CI/CD architecture
 
+```
 Developer
    |
 git push
@@ -51,3 +52,4 @@ AWS CodeDeploy
    |
    v
 EC2 Auto Scaling Group
+```
