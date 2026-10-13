@@ -6,7 +6,7 @@ This project demonstrates Infrastructure as Code, AWS networking, load balancing
 
 ## Terraform Architecture
 
-```text
+```
 User
   |
   | HTTPS
@@ -29,6 +29,7 @@ Private Subnet A       Private Subnet B
              v
           RDS MySQL
           Multi-AZ
+```
 
 ## CI/CD architecture
 
