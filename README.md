@@ -4,7 +4,7 @@ A highly available AWS application environment provisioned using Terraform and d
 
 This project demonstrates Infrastructure as Code, AWS networking, load balancing, Auto Scaling, managed databases, IAM, DNS, HTTPS and automated application deployment.
 
-## Architecture
+## Terraform Architecture
 
 ```text
 User
@@ -29,3 +29,24 @@ Private Subnet A       Private Subnet B
              v
           RDS MySQL
           Multi-AZ
+
+## CI/CD architecture
+
+Developer
+   |
+git push
+   |
+   v
+GitHub
+   |
+   v
+AWS CodePipeline
+   |
+   v
+AWS CodeBuild
+   |
+   v
+AWS CodeDeploy
+   |
+   v
+EC2 Auto Scaling Group
