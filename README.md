@@ -97,3 +97,21 @@ The project uses a single Terraform root module split into logical files.
 └── scripts/
 ```
 
+## Networking
+
+The VPC spans multiple Availability Zones.
+The Application Load Balancer is deployed in public subnets.
+EC2 instances are deployed in private subnets through an Auto Scaling Group.
+Private EC2 instances use a NAT Gateway for outbound connectivity.
+
+```
+Internet
+   |
+Internet Gateway
+   |
+Public Subnets
+   |
+NAT Gateway
+   |
+Private EC2 Subnets
+```
