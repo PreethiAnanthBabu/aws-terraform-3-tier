@@ -1,7 +1,6 @@
 # AWS Terraform 3-Tier Architecture
 
 A highly available AWS application environment provisioned using Terraform and deployed using an AWS CI/CD pipeline.
-
 This project demonstrates Infrastructure as Code, AWS networking, load balancing, Auto Scaling, managed databases, IAM, DNS, HTTPS and automated application deployment.
 
 ## Terraform Architecture
@@ -76,6 +75,7 @@ EC2 Auto Scaling Group
 - AWS CodeDeploy
 
 ## Terraform Structure
+
 The project uses a single Terraform root module split into logical files.
 
 ```
@@ -114,4 +114,41 @@ Public Subnets
 NAT Gateway
    |
 Private EC2 Subnets
+```
+
+## Security
+
+Traffic between tiers is restricted using security groups.The RDS database is not publicly accessible
+
+```
+Internet
+   |
+   | HTTPS 443
+   v
+ALB Security Group
+   |
+   | HTTP 80
+   v
+EC2 Security Group
+   |
+   | MySQL 3306
+   v
+RDS Security Group
+```
+
+## Load Balancing and Auto Scaling
+
+The Application Load Balancer forwards traffic to a target group containing EC2 instances managed by an Auto Scaling Group.
+Target health checks are configured on:
+
+```
+/
+```
+
+Auto Scaling configuration:
+
+```
+Minimum: 2
+Desired: 2
+Maximum: 4
 ```
