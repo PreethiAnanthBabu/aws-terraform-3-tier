@@ -152,3 +152,58 @@ Minimum: 2
 Desired: 2
 Maximum: 4
 ```
+
+## Database
+
+Amazon RDS MySQL is deployed in private subnets.
+The database:
+- Is not publicly accessible
+- Uses a DB subnet group
+- Allows MySQL access only from the EC2 security group
+- Uses Multi-AZ deployment for high availability
+
+## DNS and HTTPS
+
+Amazon Route 53 is used for DNS.
+The custom domain points to the Application Load Balancer using Route 53 Alias records.
+AWS Certificate Manager provides the SSL/TLS certificate.TLS terminates at the Application Load Balancer
+
+```
+http://yourdomain.com
+        |
+        v
+ALB Port 80
+        |
+        | Redirect
+        v
+https://yourdomain.com
+        |
+        v
+ALB Port 443
+        |
+        v
+Target Group
+        |
+        v
+EC2 Port 80
+```
+
+## CI/CD Pipeline
+
+The application deployment workflow is:
+
+```
+GitHub
+   ↓
+CodePipeline
+   ↓
+CodeBuild
+   ↓
+CodeDeploy
+   ↓
+Auto Scaling EC2
+```
+
+## GitHub
+
+A push to the ```main``` branch triggers the pipeline.
