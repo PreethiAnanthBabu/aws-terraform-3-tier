@@ -207,3 +207,21 @@ Auto Scaling EC2
 ## GitHub
 
 A push to the ```main``` branch triggers the pipeline.
+
+## CodeBuild
+
+CodeBuild reads:
+
+```
+buildspec.yml
+```
+and prepares the deployment artifact.
+
+## CodeDeploy
+
+CodeDeploy reads:
+
+```
+appspec.yml
+```
+and deploys the application files to EC2 instances.
