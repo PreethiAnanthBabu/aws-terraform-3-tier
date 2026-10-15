@@ -1,6 +1,6 @@
 # AWS Terraform 3-Tier Architecture
 
-A highly available AWS application environment provisioned using Terraform and deployed using an AWS CI/CD pipeline.
+A multi-AZ AWS 3-tier application environment provisioned using Terraform and deployed using an AWS CI/CD pipeline.
 This project demonstrates Infrastructure as Code, AWS networking, load balancing, Auto Scaling, managed databases, IAM, DNS, HTTPS and automated application deployment.
 
 ## Architecture
