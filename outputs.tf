@@ -33,5 +33,5 @@ output "route53_name_servers" {
 
 output "website_url" {
   description = "Website domain"
-  value       = "http://${var.domain_name}"
+  value       = "https://${var.domain_name}"
 }
