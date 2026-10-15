@@ -291,3 +291,49 @@ The following are not committed:
 - Database passwords
 - Terraform state files
 - terraform.tfvars
+
+## Project Evidence
+
+### Terraform Deployment
+
+![Terraform Apply](screenshots/01-terraform-apply.png)
+
+### AWS Network
+
+![VPC Subnets](screenshots/02-vpc-subnets.png)
+
+### ALB HTTPS Listeners
+
+![ALB](screenshots/03-alb-listeners.png)
+
+### Healthy Target Group
+
+![Healthy Targets](screenshots/04-target-group-healthy.png)
+
+### EC2 Auto Scaling
+
+![Auto Scaling](screenshots/05-auto-scaling-group.png)
+
+### Multi-AZ RDS
+
+![RDS](screenshots/06-rds-multiaz.png)
+
+### Route 53 DNS
+
+![Route53](screenshots/07-route53.png)
+
+### ACM HTTPS Certificate
+
+![ACM](screenshots/08-acm-issued.png)
+
+### Successful CI/CD Pipeline
+
+![CodePipeline](screenshots/09-codepipeline-success.png)
+
+### CodeDeploy
+
+![CodeDeploy](screenshots/10-codedeploy-success.png)
+
+### HTTPS Application
+
+![Website](screenshots/11-https-website.png)
