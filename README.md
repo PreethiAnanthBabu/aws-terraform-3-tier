@@ -123,7 +123,7 @@ Private EC2 Subnets
 
 ## Security
 
-Traffic between tiers is restricted using security groups.The RDS database is not publicly accessible
+Traffic between tiers is restricted using security groups. The RDS database is not publicly accessible
 
 ```
 Internet
@@ -171,7 +171,7 @@ The database:
 
 Amazon Route 53 is used for DNS.
 The custom domain points to the Application Load Balancer using Route 53 Alias records.
-AWS Certificate Manager provides the SSL/TLS certificate.TLS terminates at the Application Load Balancer
+AWS Certificate Manager provides the SSL/TLS certificate. TLS terminates at the Application Load Balancer
 
 ```
 http://yourdomain.com
