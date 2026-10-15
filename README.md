@@ -94,6 +94,7 @@ The project uses a single Terraform root module split into logical files.
 ├── ec2-asg.tf
 ├── rds.tf
 ├── route53.tf
+├── acm.tf
 ├── outputs.tf
 ├── buildspec.yml
 ├── appspec.yml
